@@ -45,10 +45,19 @@ If you are using LAMP, please deploy Typo3 to your Server as follows:
    ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/typo3/ty06.png)
 
 7. Log in Typo3  
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/typo3/ty07.png)
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/typo3/typo3-login-websoft9.png)
 
 8. Typo3 dashboard  
    ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/typo3/ty08.png)
+
+### Upgrade
+
+Typo3 backend have the interface for Upgrade
+
+1. Login Typo3 dashboard, go to【ADMIN TOOLS】> 【Upgrade】
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/typo3/typo3-upgrade-websoft9.png)
+   
+2. Upgrade Typo3 by yourself
 
 ### Extension Manager
 

@@ -59,6 +59,7 @@ module.exports = [
       '/zh/pmwiki',
       '/zh/processwire',
       '/zh/tiki',
+      '/zh/typo3',
       '/zh/typecho',
       '/zh/wecenter',
       '/zh/weengine',
