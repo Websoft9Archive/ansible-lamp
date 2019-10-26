@@ -1,0 +1,4 @@
+cloud: azure
+mysqlver: 5.7
+phpver: 7.1
+
