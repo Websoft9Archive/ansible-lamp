@@ -55,6 +55,7 @@
     - { role: lamp , tags: "lamp"}
     - {role: phpmyadmin, tags: "phpmyadmin"}
     - {role: 9panel, tags: "9panel"}
+    - {role: inotify_watch, tags: "inotify_watch"}
 
 
 
