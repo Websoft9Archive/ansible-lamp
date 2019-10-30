@@ -1,4 +1,0 @@
-dependencies:
-  - { role: apache }
-  - { role: mysql }
-  - { role: php-fpm }

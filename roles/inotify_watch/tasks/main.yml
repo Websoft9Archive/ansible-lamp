@@ -11,6 +11,11 @@
     - {src: inotify_watch.sh , dest: /usr/local/bin/inotify_watch}
     - {src: inotify_watch.service , dest: /lib/systemd/system/inotify_watch.service}
 
+- name: inotify_watch execute permission
+  file:
+    path: /usr/local/bin/inotify_watch
+    mode: 750
+
 - name: Start inotify_watch
   service:
     name: inotify_watch.service
