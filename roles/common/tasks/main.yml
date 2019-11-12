@@ -1,5 +1,6 @@
 ---
-- debug: msg="Hello World"
+- debug: 
+    msg: "12" 
 
 # Centos 更新 安装基础软件工具等操作
 - block:
