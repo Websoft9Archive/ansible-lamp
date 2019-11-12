@@ -1,6 +1,6 @@
 # 服务器前置任务(ubuntu使用)
 - name: lamp
-  hosts: lamp
+  hosts: all
   become: yes
   become_method: sudo
   gather_facts: False
@@ -13,9 +13,11 @@
 # 核心任务
 
 - name: lamp
-  hosts: lamp
+  hosts: all
   become: yes
   become_method: sudo
+  vars_prompt:
+  
 
   roles:
     - { role: common , tags: "common"}  
