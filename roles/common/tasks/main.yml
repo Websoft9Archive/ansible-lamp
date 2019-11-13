@@ -1,7 +1,4 @@
 ---
-# - debug: 
-#     msg: "Hello World ! "
-
 # Centos 更新 安装基础软件工具等操作
 - block:
   - name: System Upgrade
@@ -10,13 +7,6 @@
   - name: Install EPEL
     yum:
       name: epel-release
-    # template:
-    #   src: '{{item.src}}'
-    #   dest: '{{item.dest}}'
-    # with_items:
-    #   - {src: epel.repo.jinja2,dest: /etc/yum.repos.d/epel.repo}
-    #   - {src: 'RPM-GPG-KEY-EPEL-{{ansible_distribution_version}}',dest: /etc/pki/rpm-gpg/}
-
 
   - name: Disable SELinux
     selinux:
@@ -24,7 +14,7 @@
 
   - name:  temporarily disable Selinux
     shell: setenforce 0 
-    ignore_errors: yes
+    when: ansible_selinux.status != 'disabled'
 
   - name: Install Common Software
     yum: 
