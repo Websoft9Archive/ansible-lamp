@@ -12,7 +12,6 @@ jobs:
       
     - uses: actions/cache@v1
       with:
-        id: cache
         path: ~/.npm
         key: ${{ runner.os }}-node-${{ hashFiles('docs/package.json') }}
         restore-keys: |
@@ -20,7 +19,7 @@ jobs:
           
     - name: npm install vuepress
       run: |
-       npm install -g vuepress
+       sudo npm install -g vuepress
         
     - name: vuepress build
       run: |
