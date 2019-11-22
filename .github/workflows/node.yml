@@ -6,13 +6,7 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [12.13.1]
-
     steps:
     - uses: actions/checkout@master
 
