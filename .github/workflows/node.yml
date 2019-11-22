@@ -11,15 +11,20 @@ jobs:
     - uses: actions/checkout@master
     - uses: actions/cache@v1
       with:
+        id: cache
         path: /usr/local/lib/node_modules/
-        key: ${{ runner.os }}-node-${{ hashFiles('docs/package.json') }}
+        key: ${{ runner.os }}-nodejs-${{ hashFiles('docs/package.json') }}
         restore-keys: |
-          ${{ runner.os }}-node-
+          ${{ runner.os }}-nodejs-
           
+    - name: npm install vuepress
+      if: steps.cache.outputs.cache-hit != 'true'
+      run: |
+        sudo npm install -g vuepress
+        
     - name: npm install, build
       run: |
         cd docs
-        sudo npm install -g vuepress
         sudo vuepress build .
       env:
         CI: true
