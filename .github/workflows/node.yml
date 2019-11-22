@@ -9,9 +9,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
-    - uses: actions/setup-node@v1
-      with:
-        node-version: '12.x'
+    #- uses: actions/setup-node@v1
+    #  with:
+    #    node-version: '12.x'
     - uses: actions/cache@v1
       with:
         path: ~/.npm
@@ -22,8 +22,8 @@ jobs:
     - name: npm install, build
       run: |
         cd docs
-        npm install -g vuepress
-        vuepress build .
+        sudo npm install -g vuepress
+        sudo vuepress build .
       env:
         CI: true
     
