@@ -9,15 +9,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
-    #- uses: actions/setup-node@v1
-    #  with:
-    #    node-version: '12.x'
-    - uses: actions/cache@v1
+    - name: Cache node modules
+      uses: actions/cache@v1
       with:
-        path: ~/.npm
-        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+        path: /usr/local/lib/node_modules
+        key: ${{ runner.OS }}-build-${{ hashFiles('**/package-lock.json') }}
         restore-keys: |
-          ${{ runner.os }}-node-
+          ${{ runner.OS }}-build-${{ env.cache-name }}-
+          ${{ runner.OS }}-build-
+          ${{ runner.OS }}-
           
     - name: npm install, build
       run: |
