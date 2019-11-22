@@ -13,9 +13,9 @@ jobs:
       with:
         id: cache
         path: /usr/local/lib/node_modules/vuepress
-        key: ${{ runner.os }}-node-${{ hashFiles('docs/package.json') }}
+        key: ${{ runner.os }}-${{ hashFiles('docs/package.json') }}
         restore-keys: |
-          ${{ runner.os }}-node-
+          ${{ runner.os }}-
           
     - name: npm install vuepress
       if: steps.cache.outputs.cache-hit != 'true'
