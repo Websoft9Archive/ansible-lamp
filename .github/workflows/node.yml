@@ -2,7 +2,7 @@ name: Node CI
 
 on: 
   push:
-    paths: docs
+    paths: docs/*
 
 jobs:
   build:
