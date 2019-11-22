@@ -11,7 +11,7 @@ jobs:
     - uses: actions/checkout@master
     - uses: actions/cache@v1
       with:
-        path: ~/.npm
+        path: /usr/local/lib/node_modules/
         key: ${{ runner.os }}-node-${{ hashFiles('docs/package.json') }}
         restore-keys: |
           ${{ runner.os }}-node-
