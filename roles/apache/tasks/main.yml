@@ -3,7 +3,3 @@
 
 - import_tasks: Ubuntu.yml
   when: ansible_distribution == 'Ubuntu'
-
-
-- name: populate service facts
-  service_facts:
