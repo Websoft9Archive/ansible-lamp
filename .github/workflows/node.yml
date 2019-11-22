@@ -13,7 +13,7 @@ jobs:
     - name: npm install, build
       run: |
         cd docs
-        npm install -g vuepress
+        sudo npm install -g vuepress
         vuepress build .
         echo "=============================="
         echo $(ls /usr/lib/node_modules)
