@@ -15,17 +15,18 @@ jobs:
 
     steps:
     - uses: actions/checkout@master
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
+
     - name: npm install, build
       run: |
         cd docs
         npm install -g vuepress
         vuepress build .
+        echo "=============================="
+        echo $(ls /usr/lib/node_modules)
+        echo "=============================="
       env:
         CI: true
+    
         
     - name: Git Push
       run: |
