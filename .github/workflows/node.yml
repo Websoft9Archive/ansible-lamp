@@ -18,9 +18,6 @@ jobs:
         cd docs
         npm install -g vuepress
         vuepress build .
-        echo "=============================="
-        echo $(ls /usr/lib/node_modules)
-        echo "=============================="
       env:
         CI: true
     
