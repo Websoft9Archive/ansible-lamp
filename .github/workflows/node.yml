@@ -12,10 +12,10 @@ jobs:
     - uses: actions/cache@v1
       with:
         id: cache
-        path: /usr/local/lib/node_modules/vuepress
-        key: ${{ runner.os }}-${{ hashFiles('docs/package.json') }}
+        path: /usr/local/lib/node_modules/vuepress/
+        key: ${{ runner.os }}-vuepress-${{ hashFiles('docs/package.json') }}
         restore-keys: |
-          ${{ runner.os }}-
+          ${{ runner.os }}-vuepress-
           
     - name: npm install vuepress
       if: steps.cache.outputs.cache-hit != 'true'
