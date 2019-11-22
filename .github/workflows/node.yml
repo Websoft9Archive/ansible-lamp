@@ -22,7 +22,7 @@ jobs:
       run: |
         sudo npm install -g vuepress
         
-    - name: npm install, build
+    - name: vuepress build
       run: |
         cd docs
         sudo vuepress build .
