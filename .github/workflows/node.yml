@@ -10,20 +10,15 @@ jobs:
     steps:
     - uses: actions/checkout@master
       
-    - uses: actions/setup-node@v1
+    - uses: actions/cache@v1
       with:
-        node-version: '12.x'
-
-#     - uses: actions/cache@v1
-#       with:
-#         id: cache
-#         path: /usr/local/lib/node_modules/vuepress/
-#         key: ${{ runner.os }}-vuepress-${{ hashFiles('docs/package.json') }}
-#         restore-keys: |
-#           ${{ runner.os }}-vuepress-
+        id: cache
+        path: ~/.npm
+        key: ${{ runner.os }}-node-${{ hashFiles('docs/package.json') }}
+        restore-keys: |
+          ${{ runner.os }}-node-
           
     - name: npm install vuepress
-#       if: steps.cache.outputs.cache-hit != 'true'
       run: |
        npm install -g vuepress
         
