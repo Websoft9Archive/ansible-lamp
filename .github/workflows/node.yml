@@ -12,21 +12,21 @@ jobs:
     - uses: actions/setup-node@v1
       with:
         node-version: '12.13.1'
-      
-    - uses: actions/cache@v1
-      with:
-        id: node_modules
-        path: /opt/hostedtoolcache/node/12.13.1/x64/lib/node_modules/
-        key: ${{ runner.os }}-node_modules-${{ hashFiles('docs/package.json') }}
-        restore-keys: |
-          ${{ runner.os }}-node_modules-
           
     - name: npm install vuepress
+      if: steps.node_modules.outputs.cache-hit != 'true'
       run: |
        sudo npm install -g vuepress
+       
+    - uses: actions/cache@v1
+      with:
+        id: vuepress
+        path: /opt/hostedtoolcache/node/12.13.1/x64/lib/node_modules/
+        key: ${{ runner.os }}-vuepress-${{ hashFiles('docs/package.json') }}
+        restore-keys: |
+          ${{ runner.os }}-vuepress-
         
     - name: vuepress build
-      if: steps.node_modules.outputs.cache-hit != 'true'
       run: |
         cd docs
         sudo vuepress build .
