@@ -9,22 +9,23 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
+      
     - uses: actions/setup-node@v1
       with:
         node-version: '12.13.1'
-          
-    - name: npm install vuepress
-      if: steps.node_modules.outputs.cache-hit != 'true'
-      run: |
-       sudo npm install -g vuepress
-       
+
     - uses: actions/cache@v1
       with:
-        id: vuepress
+        id: modules
         path: /opt/hostedtoolcache/node/12.13.1/x64/lib/node_modules/
-        key: ${{ runner.os }}-vuepress-${{ hashFiles('docs/package.json') }}
+        key: ${{ runner.os }}-modules-${{ hashFiles('docs/package.json') }}
         restore-keys: |
-          ${{ runner.os }}-vuepress-
+          ${{ runner.os }}-modules-
+          
+    - name: npm install vuepress
+      if: steps.modules.outputs.cache-hit != 'true'
+      run: |
+       sudo npm install -g vuepress
         
     - name: vuepress build
       run: |
