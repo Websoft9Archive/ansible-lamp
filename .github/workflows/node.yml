@@ -16,14 +16,12 @@ jobs:
 
     - uses: actions/cache@v1
       with:
-        id: modules
-        path: /opt/hostedtoolcache/node/12.13.1/x64/lib/node_modules/
-        key: ${{ runner.os }}-modules-${{ hashFiles('docs/package.json') }}
+        path: ~/.npm
+        key: ${{ runner.os }}-npm-${{ hashFiles('docs/package.json') }}
         restore-keys: |
-          ${{ runner.os }}-modules-
+          ${{ runner.os }}-npm-
           
     - name: npm install vuepress
-      if: steps.modules.outputs.cache-hit != 'true'
       run: |
        sudo npm install -g vuepress
         
