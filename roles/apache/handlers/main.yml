@@ -5,4 +5,3 @@
 - name: Apache-ubuntu Version
   debug:
     var: ubuntu_apache_ver.stdout
-  when: ansible_distribution == 'Ubuntu'

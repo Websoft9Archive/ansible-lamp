@@ -1,15 +1,16 @@
 - block:
-  - name: Init for azure
-    shell: waagent -deprovision+user --force  
-    when: cloud == "azure"
+  - name: Check Cloud
+    shell: echo "{{ansible_kernel}}" | awk -F '-' '{print $3}'
+    register: cloud
 
   - name: Remove SSH info
-    file: 
-      path: '{{item}}'
-      state: absent
+    shell: rm -rf {{item}}
     with_items:
-      - /home/{{admin_username}}/.ssh
+      - /home/*/.ssh
       - /root/.ssh
-      - /home/frapper/.ssh
-    when: cloud == "none"
-  when: init == 1
+
+  - name: Init for azure
+    shell: waagent -deprovision+user --force  
+    when: cloud.stdout == 'azure'
+
+  when: init == '1' or init == 1

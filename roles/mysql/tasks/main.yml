@@ -20,3 +20,6 @@
   shell: mysql -V
   register: mysql_ver
   notify: MySQL Version
+
+
+    

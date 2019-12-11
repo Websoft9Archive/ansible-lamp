@@ -3,3 +3,7 @@
 
 - import_tasks: Ubuntu.yml
   when: ansible_distribution == 'Ubuntu'
+
+
+- set_fact:
+    webserver: apache
