@@ -22,16 +22,6 @@
       private: no
       default: 2  
 
-    - name: 'init'
-      prompt: "Operating System initialization? \n \n
-      ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! \n
-      !! Warning ⚠ :Please select carefully, initialization will delete public key or user information !! \n
-      ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! !  \n\n
-      1: Yes\n
-      2: No (default)\n"
-      private: no
-      default: 2 
-
   vars:
     mysql_ver:
       '1': '5.5'
@@ -53,9 +43,9 @@
     - {role: common , tags: "common"}  
     - {role: cloud , tags: "cloud"}  
     - {role: apache, tags: "apache"}
-    - { role: mysql , tags: "mysql"}
-    - { role: php-fpm , tags: "php-fpm"}
-    - { role: lamp , tags: "lamp"}
+    - {role: mysql , tags: "mysql"}
+    - {role: php-fpm , tags: "php-fpm"}
+    - {role: lamp , tags: "lamp"}
     - {role: phpmyadmin, tags: "phpmyadmin"}
     - {role: 9panel, tags: "9panel"}
     - {role: inotify_watch, tags: "inotify_watch"}
