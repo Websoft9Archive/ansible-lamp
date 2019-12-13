@@ -8,7 +8,19 @@ LAMP预装包，已安装Web服务器 SSL 模块和公共免费证书方案 [Let
 
 ## 简易步骤
 
+### 免申请证书
+
 如果你想使用免费证书，只需在服务器中运行一条命令`certbot`就可以启动证书部署
+
+```
+#启动https配置
+certbot
+
+#设置证书自动更新（如果不进行此项设置，则需要每三个月手工更新证书一次）
+echo "0 0,12 * * * root python -c 'import random; import time; time.sleep(random.random() * 3600)' && certbot renew" | sudo tee -a /etc/crontab > /dev/null
+```
+
+### 自申请证书
 
 如果你已经申请了商业证书，只需三个步骤，即可完成HTTPS配置
 
