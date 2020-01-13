@@ -22,7 +22,7 @@
       1: MySQL 5.5\n
       2: MySQL 5.6 (default)\n
       3: MySQL 5.7\n
-      4: MySQL 8.0(only for Ubuntu)\n"
+      4: MySQL 8.0(not support Ubuntu)\n"
       private: no
       default: 2  
 
