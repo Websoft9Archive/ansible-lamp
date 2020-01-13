@@ -1,4 +1,4 @@
-# BT 自动化安装与部署
+# LAMP 自动化安装与部署
 
 本项目是由 [Websoft9](http://www.websoft9.com) 研发的 LAMP 自动化安装程序，开发语言是 Ansible。使用本项目，只需要用户在 Linux 上运行一条命令，即可自动化安装 LAMP，让原本复杂的安装过程变得没有任何技术门槛。  
 
@@ -11,7 +11,7 @@
 
 ## 组件
 
-包含的核心组件为：BT（中英文可选）, LAMP/LNMP等
+包含的核心组件为：LAMP
 
 更多请见[参数表](/docs/zh/stack-components.md)
 
