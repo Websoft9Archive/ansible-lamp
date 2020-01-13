@@ -12,7 +12,8 @@
       2: PHP 7.0\n
       3: PHP 7.1\n
       4: PHP 7.2 (default)\n
-      5: PHP 7.3\n"
+      5: PHP 7.3\n
+      6: PHP 7.4\n"
       private: no
       default: 4
 
@@ -20,7 +21,8 @@
       prompt: "Choose serial number to install MySQL \n
       1: MySQL 5.5\n
       2: MySQL 5.6 (default)\n
-      3: MySQL 5.7\n"
+      3: MySQL 5.7\n
+      4: MySQL 8.0(only for Ubuntu)\n"
       private: no
       default: 2  
 
@@ -29,6 +31,7 @@
       '1': 5.5
       '2': 5.6
       '3': 5.7
+      '4': 8.0
     php_ver:
       '1': 5.6
       '2': 7.0
@@ -45,9 +48,9 @@
     - role: role_apache
     - role: role_mysql
     - role: role_php-fpm
-    - role: lamp
+    - role: role_lamp
     - role: role_init_password
     - role: role_phpmyadmin
-    - role: 9panel
-    - role: inotify_watch
+    - role: role_9panel
+    - role: role_inotify_watch
     - role: role_end
