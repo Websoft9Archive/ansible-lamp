@@ -15,14 +15,16 @@
       5: PHP 7.3\n
       6: PHP 7.4\n"
       private: no
+      default: 4
 
     - name: 'mysql_choose'
       prompt: "Choose serial number to install MySQL \n
-      1: MySQL 5.5\n
-      2: MySQL 5.6\n
+      1: MySQL 5.5(not support Ubuntu)\n
+      2: MySQL 5.6(not support Ubuntu)\n
       3: MySQL 5.7\n
-      4: MySQL 8.0(not support Ubuntu)\n"
-      private: no 
+      4: MySQL 8.0(not support CentOS)\n"
+      private: no
+      default: 2  
 
   vars:
     mysql_ver:
