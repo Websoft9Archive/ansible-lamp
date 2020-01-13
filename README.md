@@ -42,7 +42,7 @@ wget -N https://raw.githubusercontent.com/Websoft9/linux/master/ansible_script/i
 
 ## 文档
 
-文档链接：http://help.websoft9.com/
+文档链接：http://help.websoft9.com/lamp-guide
 
 ## FAQ
 
