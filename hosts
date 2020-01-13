@@ -1,0 +1,2 @@
+[lamp]
+114.116.236.182  ansible_ssh_user=root  ansible_ssh_pass=Qwerty123456  ansible_sudo_pass=Qwerty123456  
