@@ -19,38 +19,39 @@
 
     - name: 'mysql_choose'
       prompt: "Choose serial number to install MySQL \n
-      1: MySQL 5.5(not support Ubuntu)\n
-      2: MySQL 5.6(not support Ubuntu)\n
+      1: MySQL 5.5(only for CentOS7.x, AmazonLinux)\n
+      2: MySQL MySQL5.6(only for CentOS7.x, AmazonLinux, Ubuntu16.04 )\n
       3: MySQL 5.7\n
-      4: MySQL 8.0(not support CentOS)\n"
+      4: MySQL 8.0\n"
       private: no
-      default: 2  
+      default: 3
 
   vars:
     mysql_ver:
-      '1': 5.5
-      '2': 5.6
-      '3': 5.7
-      '4': 8.0
+      '1': "5.5"
+      '2': "5.6"
+      '3': "5.7"
+      '4': "8.0"
     php_ver:
-      '1': 5.6
-      '2': 7.0
-      '3': 7.1
-      '4': 7.2
-      '5': 7.3
-    mysql_version: "{{mysql_ver[mysql_choose]}}"
+      '1': "5.6"
+      '2': "7.0"
+      '3': "7.1"
+      '4': "7.2"
+      '5': "7.3"
 
-    phpver: "{{php_ver[php_choose]}}"
+    mysql_version: "{{mysql_ver[mysql_choose]}}"
+    php_version: "{{php_ver[php_choose]}}"
 
   roles:
-    - role: role_common
-    - role: role_cloud
-    - role: role_apache
-    - role: role_mysql
-    - role: role_php-fpm
-    - role: role_lamp
-    - role: role_init_password
-    - role: role_phpmyadmin
-    - role: role_9panel
-    - role: role_inotify_watch
-    - role: role_end
+    - {role: role_common, tags: "role_common"}
+    - {role: role_cloud, tags: "role_cloud"}
+    - {role: role_apache, tags: "role_apache"}
+    - {role: role_redis, tags: "role_redis"}
+    - {role: role_mysql, tags: "role_mysql"}
+    - {role: role_php-fpm, tags: "role_php-fpm"}
+    - {role: role_lamp, tags: "role_lamp"}
+    - {role: role_phpmyadmin, tags: "role_phpmyadmin"}
+    - {role: role_9panel, tags: "role_9panel"}
+    - {role: role_inotify_watch, tags: "inotify_watch"}
+    - {role: role_init_password, tags: "init_password"}
+    - {role: role_end, tags: "role_end"}
