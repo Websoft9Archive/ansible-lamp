@@ -1,6 +1,8 @@
 # MySQL 默认密码
 mysql_root_password: "123456"
 phpmyadmin_mysql_password: "123456"
+# 国内下载地址
+redis_download_url: https://libs.websoft9.com/apps/redis
   
 # 初始化MySQL root密码
 init_db: 
