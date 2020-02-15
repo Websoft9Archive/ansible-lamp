@@ -41,9 +41,6 @@
 
     mysql_version: "{{select_mysql_ver[mysql_choose]}}"
     php_version: "{{select_php_ver[php_choose]}}"
-  
-  tasks:
-    - debug: var=php_version
 
   roles:
     - {role: role_common, tags: "role_common"}
