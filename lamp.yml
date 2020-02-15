@@ -44,7 +44,7 @@
   
   tasks:
     - debug:
-       msg: lamp will deployment, MySQL version is {{ mysql_version }}, PHP version is {{php_version}}, OS is {{ansible_distribution}}
+       msg: lamp will deployment, MySQL version is {{ mysql_version }}, PHP version is {{php_version}}
 
   roles:
     - {role: role_common, tags: "role_common"}
