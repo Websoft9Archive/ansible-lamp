@@ -27,20 +27,20 @@
       default: 3
 
   vars:
-    mysql_ver:
+    select_mysql_ver:
       '1': "5.5"
       '2': "5.6"
       '3': "5.7"
       '4': "8.0"
-    php_ver:
+    select_php_ver:
       '1': "5.6"
       '2': "7.0"
       '3': "7.1"
       '4': "7.2"
       '5': "7.3"
 
-    mysql_version: "{{mysql_ver[mysql_choose]}}"
-    php_version: "{{php_ver[php_choose]}}"
+    mysql_version: "{{select_mysql_ver[mysql_choose]}}"
+    php_version: "{{select_php_ver[php_choose]}}"
 
   roles:
     - {role: role_common, tags: "role_common"}
