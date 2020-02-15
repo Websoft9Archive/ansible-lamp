@@ -1,7 +1,7 @@
 init_db: 
-  mysql:
-    user: root
-    password: 123456
+  # mysql:
+  #   user: root
+  #   password: 123456
 
   # postgrepsql:
   #   user: postgres
@@ -13,14 +13,16 @@ init_db:
 
 
 init_application:
-  application_name: 
-  application_service:
-  application_database: 
-  application_database_user:
-  application_database_host: 
-  application_database_password: 
-  application_random_password: #True or False
-  application_random_password_method: 
-  application_config_path: []
+  application:  # application name
+    service: 
+    database: 
+    database_user: 
+    database_host: 
+    database_password: 
+    default_account: 
+    default_password: 
+    random_password:  #True or False
+    random_password_method: 
+    config_path: 
 
 

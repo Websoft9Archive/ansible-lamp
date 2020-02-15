@@ -7,7 +7,7 @@
   - name: Install Apache
     yum:
       name: [httpd24u,httpd24u-mod_ssl]
-  when: ansible_distribution_major_version == '7'
+  when: (ansible_distribution == 'CentOS' and ansible_distribution_major_version == '7') or ansible_distribution == 'Amazon'
 
 - name: Install Apache
   yum:
@@ -24,7 +24,7 @@
 
 - pip:
     name: [requests==2.6.0,urllib3]
-    extra_args: --upgrade --force-reinstall
+    extra_args: --upgrade --force-reinstall --ignore-installed
 
 
 - name: Configure Apache
@@ -61,6 +61,12 @@
   with_items:
     - wwwroot
     - cert 
+
+- name: Link Apache service
+  file:
+    src: /usr/lib/systemd/system/httpd.service
+    dest: /usr/lib/systemd/system/apache.service
+    state: link
 
 
 - name: Start Apache
