@@ -43,8 +43,7 @@
     php_version: "{{select_php_ver[php_choose]}}"
   
   tasks:
-    - debug:
-       msg: lamp will deployment, MySQL version is {{ mysql_version }}, PHP version is {{php_version}}
+    - debug: var=php_version
 
   roles:
     - {role: role_common, tags: "role_common"}
