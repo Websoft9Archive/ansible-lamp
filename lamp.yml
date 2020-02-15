@@ -42,6 +42,9 @@
     mysql_version: "{{select_mysql_ver[mysql_choose]}}"
     php_version: "{{select_php_ver[php_choose]}}"
   
+  tasks:
+    - debug:
+       msg: lamp will deployment, MySQL version is {{ mysql_version }}, PHP version is {{php_version}}, OS is {{ansible_distribution}}
 
   roles:
     - {role: role_common, tags: "role_common"}
