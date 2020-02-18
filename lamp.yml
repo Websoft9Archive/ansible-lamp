@@ -41,7 +41,11 @@
 
     mysql_version: "{{select_mysql_ver[mysql_choose]}}"
     php_version: "{{select_php_ver[php_choose]}}"
-
+    
+  tasks:
+    - include_vars: roles/role_php-fpm/vars/php_runtime_meta.yml
+      when: region == '1' or region == 1
+      
   roles:
     - {role: role_common, tags: "role_common"}
     - {role: role_cloud, tags: "role_cloud"}
