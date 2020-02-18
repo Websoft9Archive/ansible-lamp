@@ -12,8 +12,8 @@
       2: PHP 7.0\n
       3: PHP 7.1\n
       4: PHP 7.2\n
-      5: PHP 7.3\n
-      6: PHP 7.4\n"
+      5: PHP 7.3 (unavailable)\n
+      6: PHP 7.4 (unavailable)\n"
       private: no
       default: 4
 
