@@ -45,6 +45,9 @@
   pre_tasks:
     - include_vars: roles/role_cloud/vars/cloud_download_url.yml
       when: region == '1' or region == 1
+
+    - debug:
+        msg: lamp will be installed, MySQL version is {{ mysql_version }}, PHP version is {{php_version}}, OS is {{ansible_distribution}}, region code is {{region}}
     
   roles:
     - {role: role_common, tags: "role_common"}
