@@ -3,7 +3,7 @@
 
 ## To do
 
-1. 增加对 Ubuntu,AmazonLinux 的支持
+1. 增加对 Ubuntu18.04 的支持
 3. 增加对 PHP7.3，PHP7.4 的支持
 
 ## Logs
@@ -15,5 +15,5 @@
 * 2020-02-13  入口文件 lamp.yml 语法修正
 
 ### Features
-
+* 2020-02-19  支持AmazonLinux
 * 2020-02-14  采用模块化安装
