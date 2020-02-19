@@ -1,6 +1,10 @@
 #全局
 region: "1"
 
+9panel_set_infrastructure: LAMP
+9panel_set_apps: 
+    - Example
+
 # MySQL 默认密码
 mysql_root_password: "123456"
 phpmyadmin_mysql_password: "123456"
