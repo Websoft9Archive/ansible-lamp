@@ -36,3 +36,4 @@
   version: master
 
 - src: http://github.com/websoft9dev/role_redis
+  version: master
