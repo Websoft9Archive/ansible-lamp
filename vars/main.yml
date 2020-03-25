@@ -1,6 +1,9 @@
 #全局
 region: "1"
 
+runtime_name: lamp
+preend_certbot: True
+
 w9panel_webs: apache
 9panel_set_infrastructure: LAMP
 9panel_set_apps: 
