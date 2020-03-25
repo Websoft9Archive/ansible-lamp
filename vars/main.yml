@@ -1,5 +1,5 @@
 #全局
-region: "1"
+region: "0"
 
 runtime_name: lamp
 preend_certbot: True
