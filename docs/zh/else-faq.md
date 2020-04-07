@@ -76,6 +76,18 @@ find /data/wwwroot/ -type f -exec chmod 640 {} \;
        Deny from all
    </Location>
    </VirtualHost>
+   
+    <VirtualHost *:443>
+   ServerName 47.105.50.140
+   SSLEngine on
+   SSLCertificateFile /etc/pki/tls/certs/localhost.crt
+   SSLCertificateKeyFile /etc/pki/tls/private/localhost.key
+   <Location />
+   Order Allow,Deny
+   Deny from all
+   </Location>
+   </VirtualHost>
+
 ```
 #### 如果设置 HTTP 跳转到 HTTPS？
 
