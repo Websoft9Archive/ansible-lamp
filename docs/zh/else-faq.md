@@ -64,7 +64,19 @@ chown -R apache.apache /data/wwwroot/
 find /data/wwwroot/ -type d -exec chmod 750 {} \;
 find /data/wwwroot/ -type f -exec chmod 640 {} \;
 ```
+#### 如何拒绝用户通过IP访问服务器？
 
+编辑你的php主文件*httpd.conf*，增加下面的一段代码，保存然后重启服务即可
+
+```
+   <VirtualHost *:80>
+       ServerName 47.105.50.140
+   <Location />
+       Order Allow,Deny
+       Deny from all
+   </Location>
+   </VirtualHost>
+```
 #### 如果设置 HTTP 跳转到 HTTPS？
 
 建议在网站根目录下的.htacesss文件中增加redirect规则，参考如下：
