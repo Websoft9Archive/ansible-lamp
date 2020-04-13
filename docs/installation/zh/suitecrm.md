@@ -119,3 +119,10 @@ SuiteCRM支持第三方的SMTP发送邮件模式，具体如下：
     'db_manager' => 'MysqliManager',
   ),
 ```
+#### SuiteCRM 安装向导完整填写了数据库和管理员信息只有，点击【Next】没有任何反应？
+
+**问题原因**：经过排查，发现【Next】动作有文件404（估计是Ajax触发），即有文件无法下载程序没有反应
+![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/suitecrm/suitecrm-noresponse-websoft9.png)
+
+**解决方案**：临时购买一台香港地区的Windows服务器，在这个服务器打开浏览器安装SuiteCRM即可
+
