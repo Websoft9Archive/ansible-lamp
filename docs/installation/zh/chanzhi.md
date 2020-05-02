@@ -8,7 +8,7 @@
 
 在开始 Chanzhi 的安装部署之前，建议完成如下事情：
 
-* 浏览器访问：*http://公网ip/9panel* ，快速了解镜像的使用
+* 本地浏览器访问：*http://公网ip/9panel* ，快速了解镜像的使用
 * 查看镜像环境参数，包括：**目录路径、版本、数据库、虚拟主机配置文件等** （[马上查看](https://support.websoft9.com/docs/lamp/zh/stack-components.html)）
 
 ## Chanzhi 安装到服务器

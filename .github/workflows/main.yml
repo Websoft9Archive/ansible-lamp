@@ -18,10 +18,14 @@ jobs:
       run: |
         cd docs
         sudo vuepress build
+
+        cd installation
+        sudo vuepress build
+        
       env:
         CI: true
     
-    # upload to azure blob
+    # upload lamp to azure blob
     - name: debug
       run: ls
     - uses: bacongobbler/azure-blob-storage-upload@v1.0.0
@@ -30,3 +34,13 @@ jobs:
         container_name: $web
         connection_string: ${{ secrets.Azure_blob }}
         extra_args: '--destination-path *docs*'
+
+    # upload lamp/installation to azure blob
+    - name: debug
+      run: ls
+    - uses: bacongobbler/azure-blob-storage-upload@v1.0.0
+      with:
+        source_dir: docs/installation/html
+        container_name: $web
+        connection_string: ${{ secrets.Azure_blob }}
+        extra_args: '--destination-path *docs/lamp*'
