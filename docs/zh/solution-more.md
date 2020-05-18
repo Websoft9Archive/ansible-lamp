@@ -28,6 +28,27 @@
 2.  保证 [Apache 虚拟主机配置文件](/zh/stack-components.md#apache)中 VirtualHost 配置段中增加 AllowOverride All
 3.  给需要使用伪静态的网站的根目录中增加.htaccess文件，并在其中配置伪静态规则
 
+
+## 设置Apache并发连接数
+
+有大量访问的时候速度很慢，或403错误后反复刷新才能访问等问题，可能是性能造成的。  
+
+一方面，需要提高服务器配置，另外一方面需要通过修改Apache并发参数以提升性能：
+
+1. 通过取消 http.conf 文件中 `Include conf/extra/httpd-mpm.conf`的注释，启用 MPM
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wamp/wamp-enablempm-websoft9.png)
+2. 找到 WinNT MPM 断路，修改ThreadsPerChild的值为更大，比如：15000
+   ```
+   # WinNT MPM
+   # ThreadsPerChild: constant number of worker threads in the server process
+   # MaxConnectionsPerChild: maximum number of connections a server process serves
+   <IfModule mpm_winnt_module>
+       ThreadsPerChild        150
+       MaxConnectionsPerChild   0
+   </IfModule>
+   ```
+**原理说明**：WinNT MPM 采用的是单一进程多线程模式，即只有唯一一个进程通过创建多线程处理请求。如果每个客户的业务涉及数十个请求，那么默认的 150 个线程就无法应对并发，因此修改成为比较大的值。
+
 ## 重置 MySQL 密码
 
 1. 远程连接到服务器，
