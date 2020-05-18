@@ -35,19 +35,30 @@
 
 一方面，需要提高服务器配置，另外一方面需要通过修改Apache并发参数以提升性能：
 
-1. 通过取消 http.conf 文件中 `Include conf/extra/httpd-mpm.conf`的注释，启用 MPM
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wamp/wamp-enablempm-websoft9.png)
-2. 找到 WinNT MPM 断路，修改ThreadsPerChild的值为更大，比如：15000
+1. 登录服务器后运行命令`httpd -V`，查询当前Apache的NPM工作模式
    ```
-   # WinNT MPM
-   # ThreadsPerChild: constant number of worker threads in the server process
-   # MaxConnectionsPerChild: maximum number of connections a server process serves
-   <IfModule mpm_winnt_module>
-       ThreadsPerChild        150
-       MaxConnectionsPerChild   0
+   httpd -V
+   AH00558: httpd: Could not reliably determine the server's fully qualified domain name
+   Server version: Apache/2.4.6 (CentOS)
+   Server built:   Aug  8 2019 11:41:18
+   Server's Module Magic Number: 20120211:24
+   Server loaded:  APR 1.4.8, APR-UTIL 1.5.2
+   Compiled using: APR 1.4.8, APR-UTIL 1.5.2
+   Architecture:   64-bit
+   Server MPM:     prefork
+     threaded:     no
+       forked:     yes (variable process count)
+   ```
+2. 修改 */etc/httpd/conf/httpd.conf*，根据服务器配置的承载能力修改并发相关参数。比如：MaxClients 设置为2000，就可以处理2000个并发请求
+   ```
+   <IfModule prefork.c>
+      StartServers        5
+      MinSpareServers     5
+      MaxSpareServers     10
+      MaxClients          256
+      MaxRequestsPerChild 3000
    </IfModule>
    ```
-**原理说明**：WinNT MPM 采用的是单一进程多线程模式，即只有唯一一个进程通过创建多线程处理请求。如果每个客户的业务涉及数十个请求，那么默认的 150 个线程就无法应对并发，因此修改成为比较大的值。
 
 ## 重置 MySQL 密码
 
