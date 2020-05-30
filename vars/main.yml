@@ -17,5 +17,5 @@ phpmyadmin_mysql_password: "123456"
 # 初始化MySQL root密码
 init_db: 
     mysql:
-      user: root
+      admin: root
       password: "123456" 
