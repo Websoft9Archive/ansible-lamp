@@ -14,8 +14,8 @@ mysql_root_password: "123456"
 phpmyadmin_webs: apache
 phpmyadmin_mysql_password: "123456"
   
-# 初始化MySQL root密码
+# init all users password for MySQL
 init_db: 
-    mysql:
-      admin: root
-      password: "123456" 
+  mysql:
+    admin: root
+    password: "123456"
