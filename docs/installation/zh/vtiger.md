@@ -120,3 +120,15 @@ VtigerCRM支持第三方的SMTP发送邮件模式，具体如下：
 > 升级之前请备份好网站代码和数据库，这是常识哦
 
 以上方案是Websoft9对[VtigerCRM官方升级文档](http://community.vtiger.com/help/vtigercrm/administrators/migration.html)的解读，建议同时阅读官方提供的升级文档
+
+## 故障
+
+#### 更换服务器IP，VtigerCRM 无法访问？错误信息：*Invalid compiled template for 'modules/Install/Header.tpl'*
+
+问题原因：VtigerCRM 启动后会生成一个记录服务器IP地址的缓存文件  
+解决方案：使用下面的命令删除缓存文件
+
+```
+- rm -rf /data/wwwroot/vtigercrm/test/templates_c/v7
+- rm -rf /data/wwwroot/vtigercrm/cache/*
+```
