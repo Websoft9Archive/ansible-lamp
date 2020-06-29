@@ -64,6 +64,7 @@ Start to deploy the second application, you should add new `<VirtualHost *:80>..
        ErrorLog "/var/log/httpd/www.mydomain.com_error_apache.log"
        CustomLog "/var/log/httpd/www.mydomain.com_apache.log" common
        <Directory "/data/wwwroot/mysite2">
+       #DirectoryIndex index.php index.html
        Options Indexes FollowSymlinks
        AllowOverride All
        Require all granted
