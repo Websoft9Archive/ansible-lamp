@@ -37,19 +37,22 @@ If you are using LAMP, please deploy SuiteCRM to your Server as follows:
 3. Environment check
   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/suitecrm/suitecrm-check-websoft9.png)
 
-3. Then configure the database connection information([Don't know password?](https://support.websoft9.com/docs/lamp/stack-accounts.html#mysql)) and set administrator account
+4. Then configure the database connection information([Don't know password?](https://support.websoft9.com/docs/lamp/stack-accounts.html#mysql)) and set administrator account
    ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/suitecrm/suitecrm-installdb-websoft9.png)
 
-4. Wait the installing  
+   > Email is your system ID, not collected by anyone because it stored in your Cloud Server
+
+5. Wait the installing  
    ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/suitecrm/suitecrm-installing-websoft9.png)
 
-5. Set your SMTP (Optional)
+
+6. Set your SMTP (Optional)
    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/suitecrm/suitecrm-smtp-websoft9.png)
 
-6. Install successfully, log in to SuiteCRM  
+7. Install successfully, log in to SuiteCRM  
    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/suitecrm/suitecrm-login-websoft9.png)
 
-7. SuiteCRM dashboard
+8. SuiteCRM dashboard
    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/suitecrm/suitecrm-backend-websoft9.png)
 
 
