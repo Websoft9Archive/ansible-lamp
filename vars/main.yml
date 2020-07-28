@@ -1,14 +1,15 @@
-#全局
+# Global var
 region: "0"
 
 runtime_name: lamp
+
+apache_certbot: True
 
 w9panel_webs: apache
 9panel_set_infrastructure: LAMP
 9panel_set_apps: 
   - Example
 
-# MySQL 默认密码
 mysql_root_password: "123456"
 phpmyadmin_webs: apache
 phpmyadmin_mysql_password: "123456"
