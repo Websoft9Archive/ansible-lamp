@@ -2,7 +2,7 @@
 sidebarDepth: 3
 ---
 
-# Backup & RestoreBackup & RestoreBackup & RestoreBackup & Restore
+# Backup & Restore
 
 ## Why
 
