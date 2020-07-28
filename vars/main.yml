@@ -1,6 +1,8 @@
 # Global var
 region: "0"
 
+common_os_support: ["CentOS", "Amazon"]
+
 runtime_name: lamp
 
 apache_certbot: True
