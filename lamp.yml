@@ -1,5 +1,5 @@
 # 核心任务
-- name: main
+- name: LAMP
   hosts: all
   become: yes
   become_method: sudo
