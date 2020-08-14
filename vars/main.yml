@@ -8,10 +8,11 @@ runtime_name: lamp
 apache_certbot: True
 
 w9panel_webs: apache
-9panel_set_infrastructure: LAMP
-9panel_set_apps: 
+w9panel_set_infrastructure: LAMP
+w9panel_set_apps: 
   - Example
-
+  
+mysql_remote: True
 mysql_root_password: "123456"
 
 docker_applications: 
