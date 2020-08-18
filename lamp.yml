@@ -56,7 +56,7 @@
     - {role: role_apache, tags: "role_apache"}
     - {role: role_redis, tags: "role_redis"}
     - {role: role_mysql, tags: "role_mysql"}
-    - {role: role_php-fpm, tags: "role_php-fpm"}
+    - {role: role_php, tags: "role_php"}
     - {role: role_runtime, tags: "role_runtime"}
     - {role: role_docker, tags: "role_docker"}
     - {role: role_9panel, tags: "role_9panel"}
