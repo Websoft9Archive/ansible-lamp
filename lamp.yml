@@ -12,8 +12,8 @@
       2: PHP 7.0\n
       3: PHP 7.1\n
       4: PHP 7.2\n
-      5: PHP 7.3 (unavailable)\n
-      6: PHP 7.4 (unavailable)\n"
+      5: PHP 7.3\n
+      6: PHP 7.4\n"
       private: no
       default: 4
 
@@ -38,6 +38,7 @@
       '3': "7.1"
       '4': "7.2"
       '5': "7.3"
+      '6': "7.4"
 
     mysql_version: "{{select_mysql_ver[mysql_choose]}}"
     php_version: "{{select_php_ver[php_choose]}}"
