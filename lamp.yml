@@ -60,6 +60,6 @@
     - {role: role_docker, tags: "role_docker"}
     - {role: role_9panel, tags: "role_9panel"}
     - {role: role_inotify_watch, tags: "inotify_watch"}
-    - {role: role_init_password, tags: "init_password"}
+    - {role: role_init, tags: "role_init"}
     - {role: role_preend, tags: "role_preend"}
     - {role: role_end, tags: "role_end"}
