@@ -1,14 +1,12 @@
 # Troubleshooting
 
-We collect the most common troubleshooting of using LAMP for your reference:
+If you're having trouble with running LAMP, here is a quick guide to solve most common problems.
 
-## Application related
+> Most faults about the Instance is closely related to the Instance provider, Cloud Platform. Provided you're sure the fault is caused by Cloud Platform, refer to [Cloud Platform Documentation](https://support.websoft9.com/docs/faq/tech-instance.html).
 
 #### Redirects Error?
 
 Check your *.htaccess* file in your application root directory, remove cycle redirects settings
-
-## Database related
 
 #### Database service could not be started?
 
@@ -34,26 +32,17 @@ By default, mysql will automatically open the binlog. Binlog is mainly used to r
 If you have confidence in your own backup, you do not need the binlog function. Refer to the following steps to turn it off:
 
 1. Edit [MySQL Configuration File] (/stack-components.md#mysql) and comment out the binlog log   
-```
-#log-bin=mysql-bin
-```
-2. Restart mysql
-```
-systemctl restart mysqld
-```
+    ```
+    #log-bin=mysql-bin
+    ```
+2. Restart MySQL
+    ```
+    sudo systemctl restart mysqld
+    ```
 #### phpMyAdmin page access blank?
 
 Please try another browser, such as chrome or firefox. If the phpMyAdmin can be opened normally before, and now appears to be incomplete or blank, it is recommended to clean up the browser cache, cookies and other information
 
-## Apache related
-
 #### When restart Apache service, such error *No spaces...*
 
 Do not worry, the Apache service is running
-
-## Instance related
-
-Instance troubleshooting is closely related to the Instance provider that is Cloud Platform   
-Please refer to [Cloud Platform Documentation](https://support.websoft9.com/docs/faq/tech-instance.html)
-
-## Network related
