@@ -45,11 +45,11 @@ DzzOffice是一套开源办公套件，适用于企业、团队搭建自己的 �
 
 #### DzzOffice 如何实现在线预览和编辑
 
-1. 管理 -》 应用市场 -》 在应用市场内找到 “onlyoffice” 应用 点击 一键安装
+1. 管理 -》 应用市场 -》 在应用市场内找到 “onlyoffice” 应用 点击 一键安装，安装完后，你可以通过http://ip:9002地址来测试onlyoffice是否安装成功，成功后进入下一步设置
 2. 管理 -》 应用市场 -》 已安装 中 点击设置按钮 进入设置页面
 	![dzzoffice-install-websoft9](http://libs.websoft9.com/Websoft9/DocsPicture/zh/dzzoffice/dzzoffice-preview-1-websoft9.png)
-   > 这里填写您的文档服务器的地址：如文档服务器地址为 http://192.168.0.2 文档服务器端口为：10000 那么 这里的地址应该是：
-http://192.168.0.2:10000/web-apps/apps/api/documents/api.js
+   > 这里填写您的文档服务器的地址：如文档服务器地址为 http://192.168.0.2 文档服务器端口为：9002 那么 这里的地址应该是：
+http://192.168.0.2:9002。
 3. 管理 -》 应用市场 -》 已安装 中 点击启用按钮 启用此应用
 4. 网盘内点击文档类文件 就可以使用 onlyoffice 来编辑文档了
 
