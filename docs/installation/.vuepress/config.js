@@ -35,7 +35,7 @@ themeConfig: {
   repo: 'Websoft9/ansible-lamp',
   editLinks: true,
   docsDir: 'docs/installation',
-  docsBranch: 'master',
+  docsBranch: 'main',
 
   //主题多语言
   locales: {
