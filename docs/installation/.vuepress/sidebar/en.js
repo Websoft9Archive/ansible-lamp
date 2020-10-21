@@ -15,7 +15,7 @@ module.exports = [
         collapsable: false,
         children: [
           '/laravel',
-          '/mantisbt',
+          // '/mantisbt',
         ]
       },
 

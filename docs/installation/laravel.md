@@ -1,34 +1,35 @@
 # Laravel
 
-Websoft9提供的 **Laravel 运行环境(LAMP)**，基于 [LAMP 环境镜像](https://support.websoft9.com/docs/lamp/zh)制作，节省你的安装部署时间。
+The  laravel runtime environment (lamp) provided by websoft9,based on [lamp environment image](https://support.websoft9.com/docs/lamp),It can help you install and deploy quickly.
 
-### Laravel安装原理
+###Laravel Installation Principle
 
-下面介绍Laravel是如何基于LAMP安装的
+How to install laravel  based on lamp
 
-> 如果您使用 **Laravel 运行环境(LAMP)**，只需了解原理即可，无需再次安装 Laravel。
+>If you use the larravel runtime environment (lamp), you only need to understand the principle, and there is no need to install larave again.
 
-1. 服务器部署 [LAMP 镜像](https://support.websoft9.com/docs/lamp/zh)
-2. 将 Laravel 包下载后上传到服务器目录：*/data/wwwroot/laravel*
-3. WinSCP 连接服务器，编辑虚拟主机配置文件：*/etc/httpd/vhost/vhost.conf* 
-4. 将 DocumentRoot, Directory 路径指向：*laravel/public*
-   ~~~
+
+1. Server deployment [lamp image]（ https://support.websoft9.com/docs/lamp )
+2. Download the larevel package and upload it to the server directory: */data/wwwroot/laravel*
+3. User Winscp connect to the server and edit the virtual host configuration file: */etc/httpd/vhost/vhost.conf* 
+4. Set  DocumentRoot and directory path : *laravel/public*
+ ~~~
    <VirtualHost *:80>
    DocumentRoot "/data/wwwroot/default/laravel/public"
     ...
    <Directory "/data/wwwroot/default/laravel/public">
    ...
    ~~~
-5. 保存，并重启服务
+5. Save and restart the service
 
-### 更新Laravel程序
+###Update laravel program
 
-当 Laravel 镜像版本过低的时候，您可能希望下载Laravel官方最新版本替换镜像内版本，我们建议的步骤如下：
+When laravel version is too low, you may want to download the latest official version of laravel to replace the internal version. The recommended steps are as follows:
 
- 1. 将Laravel下载解压，上传后替换原来的目录
- 2. 运行修改文件权限的命令
-   ~~~
-   chown -R apache.apache /data/wwwroot/laravel
-   ~~~
-   
- >下载的新版本目录结构中应用根目录（如public文件夹）与配置文件中的路径（DocumentRoot,Directory）需要保持一致
+1. Download and unzip larravel and replace the original directory after uploading
+2. Run the command to modify the file permissions
+~ ~
+chown -R apache.apache /data/wwwroot/laravel
+~ ~
+
+>In the directory structure of the new version downloaded, the application root directory (such as public folder) should be consistent with the path (document root, directory) in the configuration file
