@@ -98,6 +98,22 @@ RewriteBase /
 RewriteCond %{SERVER_PORT} !^443$
 RewriteRule ^.*$ https://%{SERVER_NAME}%{REQUEST_URI} [L,R]
 ```
+
+从 non-www 到 www 配置：
+
+```
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^example.com [NC]
+RewriteRule ^(.*)$ http://www.example.com/$1 [L,R=301,NC]
+```
+从 www 到 non-www：
+```
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^www.example.com [NC]
+RewriteRule ^(.*)$ http://example.com/$1 [L,R=301,NC]
+
+```
+
 #### LAMP 默认安装了哪些 Apache模块？ 
 
 运行命令 `apachectl -M` 查看
