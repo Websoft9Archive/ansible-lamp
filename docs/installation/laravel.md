@@ -22,7 +22,7 @@ How to install laravel  based on lamp
    ~~~
 5. Save and restart the service
 
-###Update laravel program
+###Update laravel program  
 
 When laravel version is too low, you may want to download the latest official version of laravel to replace the internal version. The recommended steps are as follows:
 
