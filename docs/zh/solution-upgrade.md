@@ -21,6 +21,9 @@ apt update && apt upgrade -y
 ```
 > 本部署包已预配置一个用于自动更新的计划任务。如果希望去掉自动更新，请删除对应的Cron
 
+## phpMyAdmin 升级
+
+参考：[《phpMyAdmin 升级》](http://support.websoft9.com/docs/mysql/zh/solution-upgrade.html#mysql-更新升级)
 
 ## 网站升级
 

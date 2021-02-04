@@ -52,7 +52,11 @@ echo "fs.inotify.max_user_watches=262144" >> /etc/sysctl.conf
 sysctl -p
 ```
 
-#### `httpd -t` 报错 [so:warn] [pid 14645] AH01574: module ssl_module is already loaded
+#### 运行命令 `httpd -t` 报错 [so:warn] [pid 14645] AH01574: module ssl_module is already loaded
 
-检查 /etc/httpd/conf.modules.d/00-base.conf 和 /etc/httpd/conf.modules.d/00-ssl.conf 文件，注释其中一个mod_ssl
+问题原因：mod_ssl 重复加载  
+解决方案：检查下面两个文件，找到 mod_ssl 字段，注释其中一个
+
+  * /etc/httpd/conf.modules.d/00-base.conf
+  * /etc/httpd/conf.modules.d/00-ssl.conf 
 
