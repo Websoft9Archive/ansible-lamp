@@ -35,10 +35,10 @@ CmsEasy（cmseasy.cn）是一个源自中国本土的100%开源免费的CMS，�
 4. 进入后台登录,输入设置的管理员账号密码
   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/cmseasy/cmseasy-login-websoft9.png)
 5. 开始体验后台 
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/cmseasy/cmseasy-accessbk-websoft9.png)
+  ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/cmseasy/cmseasy-accessbk-websoft9.png)
 
 ## 常见问题
 
 #### CmsEasy的后台地址url是什么？
 
-CmsEasy的后台地址是：*http://域名/admin*
+本地浏览器访问：*http://域名/admin*，即可进入后台登陆页面
