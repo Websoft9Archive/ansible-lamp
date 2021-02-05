@@ -27,15 +27,15 @@ CmsEasy（cmseasy.cn）是一个源自中国本土的100%开源免费的CMS，�
 ## CmsEasy 初始化安装向导
 
 1. 本地浏览器访问：*http://域名* 或 *http://公网IP* 进入安装向导（首选域名访问方式）
-  ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/cmseasy/cmseasy-startinstall-websoft9.png)
-2. 完成通过许可协议、环境检测之后，进入配置数据库界面（[查看数据库账号密码](https://support.websoft9.com/docs/lamp/zh/stack-accounts.html)）
-  ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/cmseasy/cmseasy-installsetpw-websoft9.png)
-3. 设置管理员账号，牢记之，点击“安装” 
-  ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/cmseasy/cmseasy-setadmin-websoft9.png)
-4. 系统安装成功，系统提示 
-  ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/cmseasy/cmseasy-installss-websoft9.png)
-5. 进入后台登录,开始体验后台 
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/cmseasy/cmseasy-backend-websoft9.png)
+  ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/cmseasy/cmseasy-installward-websoft9.png)
+2. 配置数据库后（[查看数据库账号密码](https://support.websoft9.com/docs/lamp/zh/stack-accounts.html)），设置管理员账号密码
+  ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/cmseasy/cmseasy-setaccount-websoft9.png)
+3. 点击“安装”，系统安装成功，系统提示
+  ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/cmseasy/cmseasy-installsuccess-websoft9.png)
+4. 进入后台登录,输入设置的管理员账号密码
+  ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/cmseasy/cmseasy-login-websoft9.png)
+5. 开始体验后台 
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/cmseasy/cmseasy-access-websoft9.png)
 
 说明：CmsEasy的后台地址是：*http://域名/admin*
 
