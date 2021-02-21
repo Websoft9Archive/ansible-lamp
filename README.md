@@ -23,7 +23,7 @@ System Requirement to install this repository are as following：
 
 ## Ecosystem
 
-Core components of this repository: Apache, PHP, MySQL/MariaDB, phpMyAdmin on docker
+Core components of this repository: Apache, PHP 5.6/7.0/7.1/7.2/7.3/7.4, MySQL 5.5/5.6/5.7/8.0, phpMyAdmin on docker
 
 Learn more about [Parameters](/docs/stack-components.md).
 
