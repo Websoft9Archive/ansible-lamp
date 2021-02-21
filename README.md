@@ -48,7 +48,7 @@ Follow our [LAMP image](https://apps.websoft9.com/lamp) for installation on majo
 
 ## Documentation
 
-To get information about initial installation, default username and password, HTTPS, SMTP, Backup, Upgrade and more, please view **LAMP Administrator Guide** ([English](https://support.websoft9.com/docs/lamp) | [简体中文](https://support.websoft9.com/docs/lamp/zh))
+Refer to **LAMP Administrator Guide** ([English](https://support.websoft9.com/docs/lamp) | [简体中文](https://support.websoft9.com/docs/lamp/zh)) to start initial installation, get default username and password, HTTPS, SMTP, Backup, Upgrade and more, 
 
 ## Changelog
 
