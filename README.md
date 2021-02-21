@@ -70,4 +70,4 @@ Yes.
 
 #### Is the default password safe?
 
-The solution used the random password solution, every installation have different password, it mean your password is different from other users
+The solution used the random password solution, every deployment produce unique password which is different from other users
