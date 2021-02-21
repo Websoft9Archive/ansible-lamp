@@ -51,7 +51,7 @@ sudo docker stop phpmyadmin
 
 #### 如何重置 php.ini 文件？
 
-我们在 Github 上报错了一份完整的 php.ini 文件模板，[下载](https://github.com/Websoft9/ansible-lamp/blob/master/roles/php/templates/php.ini) 后覆盖你服务器上的 */ect/php.ini*
+[下载 php.ini 模板](https://github.com/Websoft9/ansible-lamp/blob/master/roles/php/templates/php.ini) 后覆盖你服务器上的 */ect/php.ini*
 
 #### 如何取消 Apache Test 页面？
 

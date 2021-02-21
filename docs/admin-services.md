@@ -5,7 +5,7 @@ These commands you must know when you using the LAMP of Websoft9
 ### Apache
 
 ```shell
-#For Centos&Redhat
+#For CentOS&Redhat
 sudo systemctl start httpd
 sudo systemctl stop httpd
 sudo systemctl restart httpd
@@ -20,10 +20,10 @@ sudo systemctl status apache2
 
 ### PHP-FPM
 ```shell
-systemctl start php-fpm
-systemctl stop php-fpm
-systemctl restart php-fpm
-systemctl status php-fpm
+sudo systemctl start php-fpm
+sudo systemctl stop php-fpm
+sudo systemctl restart php-fpm
+sudo systemctl status php-fpm
 ```
 
 ### MySQL
@@ -36,11 +36,12 @@ sudo systemctl status mysql
 ```
 
 ### Redis
+
 ```shell
-systemctl start redis
-systemctl stop redis
-systemctl restart redis
-systemctl status redis
+sudo systemctl start redis
+sudo systemctl stop redis
+sudo systemctl restart redis
+sudo systemctl status redis
 ```
 
 ### phpMyAdmin
