@@ -6,7 +6,7 @@
 
 [English](/README.md) | [简体中文](/README-zh.md)  
 
-**LAMP Cloud Installer**, developed by [Websoft9](https://www.websoft9.com), is an automatic installation program of [Apache LAMP](https://lamp.apache.org/) based on Ansible and shell. It helps user install LAMP and pre-configure required items automatically and users only need to run a command on Linux. It simplifies the complicated installation and initialization process.  
+**LAMP Cloud Installer**, developed by [Websoft9](https://www.websoft9.com), is an automatic installation program of **LAMP (Linux-Apache-MySQL-PHP)** based on Ansible and shell. It helps user install LAMP and pre-configure required items automatically and users only need to run a command on Linux. It simplifies the complicated installation and initialization process.  
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/lamp/lamp-imagestacks-websoft9.png)
 
@@ -16,16 +16,14 @@ System Requirement to install this repository are as following：
 
 | Conditions       | Details                               | Notes                |
 | ------------------- | --------------------------------| -------------------- |
-| Operating System   | CentOS7.x, Ubuntu18.04, Amazon Linux2 | Optional                 |
+| Operating System   | CentOS7.x, Amazon Linux2 | Optional                 |
 | Public Cloud     | AWS, Azure, Alibaba Cloud, HUAWEI ClOUD, Tencent Cloud    | Optional                 |
 | Private Cloud     | KVM, VMware, VirtualBox, OpenStack    | Optional                 |
-| Server Configuration | vCPU no less than 1 core, Memory no less than  2 GIB, Storage no less than 10 GB, Bandwidth no less than 100M ||
-
-To learn more information, please view [Installation & Configuration](https://lamp.apache.org/installation.html).
+| Server Configuration | vCPU no less than 1 core, Memory no less than  1 GIB, Storage no less than 10 GB, Bandwidth no less than 100M ||
 
 ## Ecosystem
 
-Core components of this repository: Apache LAMP, Nginx, PostgreSQL, Docker, phpPgAdmin on docker
+Core components of this repository: Apache, PHP, MySQL/MariaDB, phpMyAdmin on docker
 
 Learn more about [Parameters](/docs/stack-components.md).
 
@@ -70,10 +68,6 @@ This program provided by Websoft9 contains a series of software with separate co
 
 Yes.
 
-#### How to install and view the latest release?
-
-Get the LAMP version from [LAMP repository](https://github.com/apache/incubator-lamp/releases), and modify the Ansible variable **[lamp_version](/roles/ansible/lamp/defaults/main.yml)** to change the LAMP version for this repository. 
-
 #### Is the default password safe?
 
-LAMP Cloud Installer use the random password solution, every installation have different password, that mean your password is different from other users
+The solution used the random password solution, every installation have different password, it mean your password is different from other users
