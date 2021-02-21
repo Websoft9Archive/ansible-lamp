@@ -1,10 +1,8 @@
 # 故障处理
 
-故障处理主要通过日志文件进行分析，从某种程度上，处理故障就是解读日志文件。
+故障处理主要通过日志进行分析，处理故障基本等同于解读日志文件。
 
-服务器相关故障的诊断和解决，与云平台密切相关，请参考[云平台文档](https://support.websoft9.com/docs/faq/zh/tech-instance.html)
-
-我们收集使用 LAMP 过程中最常见的故障，供您参考：
+> 一部分故障与云平台密切相关，如果你可以确认故障的原因是云平台造成的，请参考[云平台文档](https://support.websoft9.com/docs/faq/zh/tech-instance.html)
 
 #### 网站显示重定向错误？
 
@@ -21,6 +19,10 @@ df -lh
 
 # 查看内存使用
 free -lh
+
+# 查看 MySQL 状态
+sudo systemctl status mysql
+sudo journalctl -u mysql
 ```
 
 #### 数据库日志文件太大，导致磁盘空间不足？

@@ -56,9 +56,18 @@ MySQL data directory: */data/mysql*
 MySQL configuration file: */etc/my.cnf*    
 MySQL Web Management URL: *http://Internet IP/9panel*, get credential from [Username and Password](/stack-accounts.md)
 
-### phpMyAdmin
+### Docker
 
-phpMyAdmin configuration file: */etc/httpd/conf.d/phpmyAdmin.conf*
+Docker root directory: */var/lib/docker*  
+Docker image directory: */var/lib/docker/image*   
+Docker daemon.json: please create it when you need and save to to the directory */etc/docker*   
+
+###  phpMyAdmin
+
+phpMyAdmin is a visual MySQL management tool, is installed based on docker.  
+
+phpMyAdmin directory：*/data/apps/phpmyadmin*  
+phpMyAdmin docker compose file：*/data/apps/phpmyadmin/docker-compose.yml* 
 
 ### Redis
 

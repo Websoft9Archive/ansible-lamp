@@ -4,9 +4,17 @@ LAMP deployment package has installed the SSL module of Apache and open Certific
 
 > In addition to the vhost configuration file, HTTPS settings do not need to modify any files in Apache
 
-## Simple Steps
+## Quick start
 
-If you want to use a free certificate, just run the one command `certbot` on your instance to start the HTTPS deployment.
+### Automatic deployment
+
+If you want to use a free certificate, just run the one command `sudo certbot` on your instance to start the HTTPS deployment.
+
+```
+sudo certbot
+```
+
+### Manual deployment
 
 If you have applied for a commercial certificate, complete the HTTPS configuration in just three steps:
 
@@ -27,6 +35,7 @@ If you have applied for a commercial certificate, complete the HTTPS configurati
     </Directory>
     SSLEngine on
     SSLCertificateFile  /data/cert/mysite1.yourdomain.com.crt
+    SSLCertificateKeyFile  /data/cert/mysite1.yourdomain.com.key
     SSLCertificateKeyFile  /data/cert/mysite1.yourdomain.com.key
     </VirtualHost>
    #-----HTTPS template end------------

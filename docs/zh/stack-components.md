@@ -59,9 +59,16 @@ MySQL 可视化管理地址: *http://服务器公网IP/phpmyadmin* 用户名和
 
 ### phpMyAdmin
 
-phpMyAdmin 安装路径: */data/apps/phpmyadmin*  
-phpMyAdmin 配置文件: */data/apps/phpmyadmin/config.inc.php*   
-phpMyAdmin 虚拟主机配置文件: */etc/httpd/conf.d/phpMyAdmin.conf*   
+phpMyAdmin 是一款可视化 MySQL 管理工具，在本项目中它基于 Docker 安装。  
+
+phpMyAdmin directory：*/data/apps/phpmyadmin*  
+phpMyAdmin docker compose file：*/data/apps/phpmyadmin/docker-compose.yml* 
+
+### Docker
+
+Docker 根目录: */var/lib/docker*  
+Docker 镜像目录: */var/lib/docker/image*   
+Docker daemon.json 文件：默认没有创建，请到 */etc/docker* 目录下根据需要自行创建  
 
 ### Redis
 

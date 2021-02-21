@@ -43,3 +43,21 @@ systemctl stop redis
 systemctl restart redis
 systemctl status redis
 ```
+
+### phpMyAdmin
+
+```shell
+sudo docker start phpmyadmin
+sudo docker stop phpmyadmin
+sudo docker restart phpmyadmin
+sudo docker stats pgadmin
+```
+
+### Docker
+
+```shell
+sudo systemctl start docker
+sudo systemctl restart docker
+sudo systemctl stop docker
+sudo systemctl status docker
+```

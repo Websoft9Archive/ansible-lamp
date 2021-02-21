@@ -15,8 +15,10 @@ Insufficient disk space, insufficient memory, and configuration file errors can 
 It is recommended to first check through the command.
 
 ```shell
-# restart mysql service
-systemctl restart mysql
+# check the MySQL service
+sudo systemctl restart mysql
+sudo systemctl status mysql
+sudo journalctl -u mysql
 
 # view disk space
 df -lh
