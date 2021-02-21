@@ -48,7 +48,7 @@ Follow our [LAMP image](https://apps.websoft9.com/lamp) for installation on majo
 
 ## Documentation
 
-**LAMP Administrator Guide** ([English](https://support.websoft9.com/docs/lamp) | [简体中文](https://support.websoft9.com/docs/lamp/zh)) includes etting Started, Password and Best Practices for you
+**LAMP Administrator Guide** ([English](https://support.websoft9.com/docs/lamp) | [简体中文](https://support.websoft9.com/docs/lamp/zh)) includes Getting Started, Password and Best Practices for you
 
 ## Changelog
 
