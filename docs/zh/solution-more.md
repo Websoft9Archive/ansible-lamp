@@ -86,6 +86,70 @@ memory_limit – Minimum: 256M
 ```
 2. 保存并重启 [Apache 服务](/zh/admin-services.md#apache)
 
+## PHP文件解析方式变更
+
+LAMP 默认使用php-fpm服务来解析PHP文件，如果想用mod_php解析PHP文件，请参照下面步骤：
+
+1. 使用 SFTP 工具修改 */etc/httpd/conf.d/php.conf* （如果该目录下有php.conf的备份文件，直接复制内容到php.conf）
+```
+#
+# The following lines prevent .user.ini files from being viewed by Web clients.
+#
+<Files ".user.ini">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order allow,deny
+        Deny from all
+        Satisfy All
+    </IfModule>
+</Files>
+
+#
+# Allow php to handle Multiviews
+#
+AddType text/html .php
+
+#
+# Add index.php to the list of files that will be served as directory
+# indexes.
+#
+DirectoryIndex index.php
+
+# mod_php options
+<IfModule  mod_php7.c>
+    #
+    # Cause the PHP interpreter to handle files with a .php extension.
+    #
+    <FilesMatch \.(php|phar)$>
+        SetHandler application/x-httpd-php
+    </FilesMatch>
+
+    #
+    # Uncomment the following lines to allow PHP to pretty-print .phps
+    # files as PHP source code:
+    #
+    #<FilesMatch \.phps$>
+    #    SetHandler application/x-httpd-php-source
+    #</FilesMatch>
+
+    #
+    # Apache specific PHP configuration options
+    # those can be override in each configured vhost
+    #
+    php_value session.save_handler "files"
+    php_value session.save_path    "/var/lib/php/session"
+    php_value soap.wsdl_cache_dir  "/var/lib/php/wsdlcache"
+
+    #php_value opcache.file_cache   "/var/lib/php/opcache"
+</IfModule>
+```
+
+2. 停止 [PHP-FPM 服务](/zh/admin-services.md#PHP-FPM)
+
+3. 保存并重启 [Apache 服务](/zh/admin-services.md#apache)
+
 ## PHP版本变更
 
 请参考 [《PHP版本管理专题》](https://support.websoft9.com/docs/linux/zh/lang-php.html#版本升级)

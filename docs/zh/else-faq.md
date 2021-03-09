@@ -116,6 +116,9 @@ RewriteRule ^(.*)$ http://example.com/$1 [L,R=301,NC]
 
 ```
 
+#### LAMP 是否安装了mod_php模块，Apache服务器怎么解析PHP文件？ 
+LAMP 默认安装了mod_php模块，并且已经已经启用。Apache服务器通过php-fpm服务来解析PHP文件，如果想用mod_php解析PHP文件，请参照 [PHP文件解析方式变更](/zh/solution-more.md#PHP文件解析方式变更)
+
 #### LAMP 默认安装了哪些 Apache模块？ 
 
 运行命令 `apachectl -M` 查看

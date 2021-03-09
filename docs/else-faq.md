@@ -74,6 +74,13 @@ RewriteBase /
 RewriteCond %{SERVER_PORT} !^443$
 RewriteRule ^.*$ https://%{SERVER_NAME}%{REQUEST_URI} [L,R]
 ```
+
+#### Is mod_php installed in LAMP, how does Apache server parse PHP files?
+
+Lamp has installed mod_php by default, and has been enabled. Apache server parses PHP files through PHP FPM service, if you want to use mod_php, please refer to [PHP file parsing method change] (/solution-more.md#PHP Change of file parsing method)
+
+LAMP 默认安装了mod_php模块，并且已经已经启用。Apache服务器通过php-fpm服务来解析PHP文件，如果想用mod_php解析PHP文件，请参照 [PHP文件解析方式变更](/zh/solution-more.md#PHP文件解析方式变更)
+
 #### Which Apache modules are installed by default by LAMP?
 
 Use command `apachectl -M` to list all modules
