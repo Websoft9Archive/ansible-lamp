@@ -60,6 +60,61 @@
    </IfModule>
    ```
 
+## Apache模块
+
+安装模块之前，先查看当前已安装的所有模块，然后再决定是否安装，最后将已安装模块启用或停止。
+
+### 查看
+
+通过 `apachectl -M` 命令可以查看已经安装的所有Apache模块。  
+
+### 安装
+
+安装模块有yum/apt在线安装和apxs源码编译安装两种方式，其中在线安装非常简单：
+
+#### 在线安装
+
+例如：准备在CentOS上安装 `mod_ssl` 模块:
+
+1. 搜索 mod_ssl 是否存在
+
+   ```
+   sudo yum search mod_ssl
+   ============================= N/S matched: mod_ssl =============================
+   mod_ssl.x86_64 : SSL/TLS module for the Apache HTTP Server
+   ```
+
+2. 搜索结果提示有一个 mod_ssl.x86_64 可用，接下来运行安装命令
+   ```
+   sudo yum install mod_ssl
+   ```
+3. 等待自动安装，直至安装完成
+
+#### 源码编译安装
+
+如果在线搜索找不到所需的 Module, 就需要通过源码编译安装的方式安装新的模块。主要步骤如下：
+
+1. 下载 Apache 源码到 /opt 目录，并解压之
+   ```
+   cd /opt
+   wget https://codeload.github.com/shivaas/mod_evasive/zip/master
+   unzip master
+   ```
+2. 以安装 mod_evasive-master 模块为例，我们找到其所在的目录，然后运行编译命令, 重启Apache服务
+   ```
+   cd mod_evasive-master
+   apxs -i -c -a mod_evasive24.c
+   systemctl restart apache
+   ```
+3. 通过`apachectl` 命令查看，mod_evasive 已经启用
+   ```
+   apachectl -M | grep evasive
+   evasive24_module (shared)
+
+   ```
+
+> 以上的源码编译安装方案来源于[此处](https://www.hugeserver.com/kb/install-enable-mod_evasive-apache-module-centos7/)
+
 ## 重置 MySQL 密码
 
 1. 远程连接到服务器，
