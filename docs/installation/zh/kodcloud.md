@@ -4,7 +4,7 @@
 
 [KodCloud](https://kodcloud.com)-可道云一个基于Web的在线文件管理和代码编辑器系统，界面风格和操作体验类似Windows，及其好用。合适构建私有企业网盘、云资源管理、多媒体管理、网站管理等场景。 
 
-[官方演示](http://demo.kodcloud.com/index.php?user/login)
+[官方演示](http://demo.kodcloud.com/index.php)
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/kodexplorer/kodcloud-gui-websoft9.png)
 
