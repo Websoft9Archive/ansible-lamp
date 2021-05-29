@@ -43,7 +43,7 @@ SuiteCRM是一个屡获殊荣的企业级的、强大的、可定制的，免费
 5. 开始体验后台
    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/suitecrm/suitecrm-backend-websoft9.png)
 
-> 需要了解更多SuiteCRM 的使用，请参考官方文档：[EspoCRM Documentation](https://suitecrm.com/wiki/index.php/Main_Page)
+> 需要了解更多SuiteCRM 的使用，请参考官方文档：[SuiteCRM Documentation](https://docs.suitecrm.com/)
 
 ## 常见问题
 
