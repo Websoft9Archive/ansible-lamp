@@ -21,7 +21,7 @@ SuiteCRM是一个屡获殊荣的企业级的、强大的、可定制的，免费
 
 1. 通过域名控制台完成解析域名（增加一个A记录指向服务器IP），并测试是否成功
 2. 通过 [phpMyAdmin 登录 MySQL](https://support.websoft9.com/docs/lamp/zh/admin-mysql.html)，为 SuiteCRM 系统增加一个数据库，假如名称为：`suitecrm`
-3. 到 SuiteCRM 官方[下载源码](https://www.SuiteCRM.org/downloads)
+3. 到 SuiteCRM 官方[下载源码](https://suitecrm.com/download/)
 4. 参考[《如何在 LAMP 上增加网站》](https://support.websoft9.com/docs/lamp/zh/solution-deployment.html#安装第二个网站) ，将 SuiteCRM 安装到服务器的 [LAMP](https://support.websoft9.com/docs/lamp/zh/) 环境中
 
 ---
