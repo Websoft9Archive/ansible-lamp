@@ -2,7 +2,7 @@
 
 This chapter is used for users who have subscribed **Dolibarr image** or **LAMP image**.
 
-Dolibarr([DEMO](https://dolibarr.com/demo/)) is a fork of SugarCRM Community Edition. Massively extended, Dolibarr delivers Workflow, Reporting, Portal, Quotes, Products, Invoices, Accounts, Contacts, Opportunities, Projects, Responsive mobile theme, Email marketing campaigns, Knowledge Base, Outlook and Thunderbird integration, Contracts, Leads, Activities and much more.
+Dolibarr([DEMO](https://www.dolibarr.org/onlinedemo.php)) is a fork of SugarCRM Community Edition. Massively extended, Dolibarr delivers Workflow, Reporting, Portal, Quotes, Products, Invoices, Accounts, Contacts, Opportunities, Projects, Responsive mobile theme, Email marketing campaigns, Knowledge Base, Outlook and Thunderbird integration, Contracts, Leads, Activities and much more.
 
 ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/dolibarr/dolibarr-gui-websoft9.png)
 
