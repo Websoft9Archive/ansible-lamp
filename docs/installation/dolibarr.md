@@ -16,7 +16,7 @@ Before your installation, suggest you complete follows:
 
 ## Dolibarr deployment
 
-**If you are using the Websoft9 Dolibarr Image, go to the [Dolibarr Installation Wizard](/dolibarr.md#dolibarr-installation-wizard) directly**
+**If you are using the Websoft9 Dolibarr Image, go to the [Dolibarr Installation Wizard](/dolibarr.md#Dolibarr Installation Wizar) directly**
 
 If you are using LAMP, please deploy Dolibarr to your Server as follows:
 
