@@ -2,7 +2,7 @@
 
 This chapter is used for users who have subscribed **Dolibarr image** or **LAMP image**.
 
-Dolibarr is a fork of SugarCRM Community Edition. Massively extended, Dolibarr delivers Workflow, Reporting, Portal, Quotes, Products, Invoices, Accounts, Contacts, Opportunities, Projects, Responsive mobile theme, Email marketing campaigns, Knowledge Base, Outlook and Thunderbird integration, Contracts, Leads, Activities and much more.
+Dolibarr is a software suite for small and micro enterprises, freelancers and other enterprises, which used for resource planning and customer relationship management. You can use one web suite to manage all of your business by Dolibarr Management SoftwareDiscourseDiscourse Reviews
 
 ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/dolibarr/dolibarr-gui-websoft9.png)
 
