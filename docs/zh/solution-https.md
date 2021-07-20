@@ -22,24 +22,24 @@ sudo certbot
 
 1. 将申请的证书、 证书链文件和秘钥文件上传到 */data/cert* 目录
 2. 打开虚拟主机配置文件：*/etc/httpd/conf.d/vhost.conf* ，插入如下的 **HTTPS 配置项** 到配置文件中
-   ``` text
-   #-----HTTPS template start------------
-   <VirtualHost *:443>
-    ServerName  mysite1.yourdomain.com
-    DocumentRoot "/data/wwwroot/mysite1"
-    #ErrorLog "logs/mysite1.yourdomain.com-error_log"
-    #CustomLog "logs/mysite1.yourdomain.com-access_log" common
-    <Directory "/data/wwwroot/mysite1">
-    Options Indexes FollowSymlinks
-    AllowOverride All
-    Require all granted
-    </Directory>
-    SSLEngine on
-    SSLCertificateFile  /data/cert/mysite1.yourdomain.com.crt
-    SSLCertificateKeyFile  /data/cert/mysite1.yourdomain.com.key
-    SSLCertificateKeyFile  /data/cert/mysite1.yourdomain.com.key
-    </VirtualHost>
-   #-----HTTPS template end------------
+   ``` shell
+      #-----HTTPS template start------------
+      <VirtualHost *:443>
+       ServerName  mysite1.yourdomain.com
+       DocumentRoot "/data/wwwroot/mysite1"
+       #ErrorLog "logs/mysite1.yourdomain.com-error_log"
+       #CustomLog "logs/mysite1.yourdomain.com-access_log" common
+       <Directory "/data/wwwroot/mysite1">
+       Options Indexes FollowSymlinks
+       AllowOverride All
+       Require all granted
+       </Directory>
+       SSLEngine on
+       SSLCertificateFile  /data/cert/mysite1.yourdomain.com.crt
+       SSLCertificateKeyFile  /data/cert/mysite1.yourdomain.com.key
+       SSLCertificateKeyFile  /data/cert/mysite1.yourdomain.com.key
+       </VirtualHost>
+      #-----HTTPS template end------------
    ```
 3. 修改其中的 ServerName, DocumentRoot, ErrorLog, CusomLog, Directory等项的值（[修改参考](/zh/solution-deployment.md#virtualhost)）
 4. 保存 vhost.conf，然后在 WinSCP 中运行重启服务命令 或 云控制台重启服务器 ：
