@@ -29,7 +29,7 @@
 3. 修改 [Apache虚拟机主机配置文件](/zh/stack-components.md#apache)，修改虚拟主机 ** VirtualHost ** 端口号
    
    ```text
-  <VirtualHost *:81>
+   <VirtualHost *:81>
     ServerName wordpress.example.com
     #ServerAlias example.com
     DocumentRoot "/data/wwwroot/web1"
@@ -40,9 +40,9 @@
         AllowOverride All
         Require all granted
     </Directory>
-</VirtualHost>
+   </VirtualHost>
 
-<VirtualHost *:82>
+   <VirtualHost *:82>
     ServerName wordpress.example.com
     #ServerAlias example.com
     DocumentRoot "/data/wwwroot/web2"
@@ -53,10 +53,10 @@
         AllowOverride All
         Require all granted
     </Directory>
-</VirtualHost>
-
-   ...
+   </VirtualHost>
+   
    ```
+
 4. 保存配置文件，在 Apache 主配置文件 httpd.conf 中监听对应端口
    
    ```text
@@ -64,7 +64,7 @@
    Listen 80
    Listen 81
    Listen 82
-   ...
+  
    ```
 
 5. 重启 [Apache 服务](/zh/admin-services.md#apache)
