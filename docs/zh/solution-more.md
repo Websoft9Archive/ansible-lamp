@@ -10,14 +10,64 @@
 
 1. 确保域名解析已经生效  
 2. 使用 WinSCP 等工具登录云服务器
-2. 修改 [Apache虚拟机主机配置文件](/zh/stack-components.md#apache)，将其中的 **ServerName** 项的值修改为你的域名
+3. 修改 [Apache虚拟机主机配置文件](/zh/stack-components.md#apache)，将其中的 **ServerName** 项的值修改为你的域名
    ```text
    <VirtualHost *:80>
    ServerName www.mydomain.com # 此处修改为你的域名
    DocumentRoot "/data/wwwroot/mysite2"
    ...
    ```
-3. 保存配置文件，重启 [Apache 服务](/zh/admin-services.md#apache)
+4. 保存配置文件，重启 [Apache 服务](/zh/admin-services.md#apache)
+
+
+## 配置 Apache 使用不同端口访问网站
+
+当服务有多个网站，但不想通过域名访问，可以配置 Apache 使用不同的端口访问不同的网站,步骤如下：
+
+1. 确保在安全组中已放通相应端口
+2. 使用 WinSCP 等工具登录云服务器
+3. 修改 [Apache虚拟机主机配置文件](/zh/stack-components.md#apache)，修改虚拟主机 ** VirtualHost ** 端口号
+   
+   ```text
+  <VirtualHost *:81>
+    ServerName wordpress.example.com
+    #ServerAlias example.com
+    DocumentRoot "/data/wwwroot/web1"
+    ErrorLog "logs/wordpress-error_log"
+    CustomLog "logs/wordpress-access_log" common
+    <Directory "/data/wwwroot/web1">
+        Options Indexes FollowSymlinks
+        AllowOverride All
+        Require all granted
+    </Directory>
+</VirtualHost>
+
+<VirtualHost *:82>
+    ServerName wordpress.example.com
+    #ServerAlias example.com
+    DocumentRoot "/data/wwwroot/web2"
+    ErrorLog "logs/wordpress-error_log"
+    CustomLog "logs/wordpress-access_log" common
+    <Directory "/data/wwwroot/web2">
+        Options Indexes FollowSymlinks
+        AllowOverride All
+        Require all granted
+    </Directory>
+</VirtualHost>
+
+   ...
+   ```
+4. 保存配置文件，在 Apache 主配置文件 httpd.conf 中监听对应端口
+   
+   ```text
+   #Listen 12.34.56.78:80
+   Listen 80
+   Listen 81
+   Listen 82
+   ...
+   ```
+
+5. 重启 [Apache 服务](/zh/admin-services.md#apache)
 
 
 ## 使用 Apache 伪静态
