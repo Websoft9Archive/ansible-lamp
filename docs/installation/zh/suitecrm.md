@@ -64,6 +64,13 @@ SuiteCRM是一个屡获殊荣的企业级的、强大的、可定制的，免费
 SuiteCRM默认安装只有英文，需要中文或其他语言，需要下载语言包，然后通过后台进行安装，以中文为例，具体如下：
 
 1.  下载[中文语言包](https://crowdin.com/project/suitecrmtranslations/zh-CN) – 存到本地电脑上
+    - 该网站需要先注册/登录，然后加入 join 到 SuiteCRM 项目，等待平台审核后，才能下载。
+    ![join](https://libs.websoft9.com/Websoft9/blog/tmp/suitecrm/zh/suitecrm-translation-zh00-websoft9.png)
+    ![down](https://libs.websoft9.com/Websoft9/blog/tmp/suitecrm/zh/suitecrm-translation-zh01-websoft9.png)
+    
+    - 上述方式需要等待7天左右时间，因此也可以到第三方网站 [sourceforge](https://sourceforge.net/projects/suitecrmtranslations/files/) 下载对应版本的语言包
+
+
 2.  以Admin身份进入SuiteCRM，进入 “Module loader”
     ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/suitecrm/suitecrm-lmodule-websoft9.png)
 3.  Upload file->Install it->Commit
@@ -100,9 +107,7 @@ SuiteCRM支持第三方的SMTP发送邮件模式，具体如下：
 
 #### 修改了数据库密码SuiteCRM不能访问？
 
-有些用户安装的时候使用的是`root/123456`这个数据库账号，后续觉得有些不安全，因此修改了数据库root密码，发现SuiteCRM不能访问了。
-
-首先，不能访问是正常的，因为SuiteCRM在安装的时候已经将数据库账号信息写到配置文件中，若后续修改数据库密码，配置文件不会自动更新.
+SuiteCRM 在安装的时候已经将数据库账号信息写到配置文件中，若后续修改数据库密码，配置文件不会自动更新。
 
 只需要修改配置文件: */data/wwwroot/default/suitecrm/config.php*，对应的 `db_password` 参数即可
 
