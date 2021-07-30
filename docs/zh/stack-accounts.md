@@ -6,7 +6,7 @@
 
 * 管理员账号：*`root`*
 * 管理员密码：存储在您的服务器指定文件中（ */credentials/password.txt* ）    
-  建议通过云控制台的命令终端，运行下图**红框**所示命令，获取数据库密码   
+  建议通过云控制台的命令终端，运行命令：sudo cat /credentials/password.txt，获取数据库密码   
    ![运行cat命令](https://libs.websoft9.com/Websoft9/DocsPicture/zh/common/catdbpassword-websoft9.png)
 
   **注意**：若自行修改密码，务必采用类似于：f@N7eUUm25xAjP!$ 类似的加强密码，这样有助于提高数据库的安全性，减少数据库密码被破解的风险。
