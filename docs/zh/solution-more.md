@@ -173,23 +173,50 @@
    sudo git clone https://github.com/Websoft9/linux.git; cd linux/Mysql_ResetPasswd_Script;sudo sh reset_mysql_password.sh
    ```
 
-## 修改 php.ini
+## 修改 php 配置
 
-在使用PHP网站的时候，你可能会碰到需要修改：上传文件大小、内存限制等参数。这个时候，就需要通过修改 `php.ini` 来实现
+在使用PHP网站的时候，你可能会碰到需要修改：上传文件大小、内存限制等参数。这个时候，就需要修改 PHP 的配置文件。  
+
+有两种修改 PHP 配置的方案：
+
+
+
+### 修改 php.ini
 
 1. 使用 SFTP 工具修改 */etc/php.ini* 
-```
-# File upload limit
-post_max_size = 16M
-upload_max_filesize = 16M
+   ```
+   # File upload limit
+   post_max_size = 16M
+   upload_max_filesize = 16M
 
-# Max Execution Time
-max_execution_time = 90
+   # Max Execution Time
+   max_execution_time = 90
 
-# Memory Limit
-memory_limit – Minimum: 256M
-```
+   # Memory Limit
+   memory_limit – Minimum: 256M
+   ```
 2. 保存并重启 [Apache 服务](/zh/admin-services.md#apache)
+
+### 修改 .htaccess 
+
+对于不方便修改 php.ini 的情况，例如：Docker 或 不想全局修改，就可以参考下面的方案：
+
+1. 使用 SFTP 工具修改**网站根目录**下的 .htaccess 文件（没有此文件可以自行创建），增加所需的配置项
+   ```
+   # File upload limit
+   php_value  post_max_size = 16M
+   php_value  upload_max_filesize = 16M
+
+   # Max Execution Time
+   php_value  max_execution_time = 90
+
+   # Memory Limit
+   php_value  memory_limit – Minimum: 256M
+   ```
+   > 主要是在 PHP 项中增加前缀 php_value  
+
+2. 保存并重启 [PHP 服务](/zh/admin-services.md#apache) 或 Docker 服务
+
 
 ## PHP文件解析方式变更
 
