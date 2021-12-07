@@ -87,6 +87,7 @@ These ports should be opened for this application:
 | MySQL | 3306 | Remote connect MySQL | Optional |
 | HTTP | 80 | HTTP requests for LAMP | Required |
 | HTTPS | 443 | HTTPS requests LAMP | Optional |
+| HTTP | 9090 | phpMyAdmin on Docker | Optional |
 
 ## Version
 
