@@ -3,7 +3,7 @@
 Updates and upgrades are one of the maintenance tasks for sytem. Programs that are not upgraded for a long time, like buildings that are not maintained for a long time, will accelerate aging and gradually lose functionality until they are unavailable.
 
 You should know the differences between the terms **Update** and **Upgrade**([Extended reading](https://support.websoft9.com/docs/faq/tech-upgrade.html#update-vs-upgrade))
-- Operating system patching is **Update**, Ubuntu16.04 to Ubuntu18.04 is **Upgrade**
+- Operating system patching is **Update**, Ubuntu20.04 to Ubuntu21.04 is **Upgrade**
 - MySQL5.6.25 to MySQL5.6.30 is **Update**, MySQL5.6 to MySQL5.7 is **Upgrade**
 
 For LAMP maintenance, focus on the following two Update & Upgrade jobs
