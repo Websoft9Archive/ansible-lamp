@@ -19,15 +19,17 @@ jobs:
         
     - name: vuepress build for LAMP and Installation
       run: |
+        sudo apt install tree -y
         cd docs
         sudo vuepress build
-        ls
+        tree html/lamp
         sudo rm -rf html/lamp/installation
-        ls
+        tree html/lamp
+
         cd installation
         sudo vuepress build
-        ls
-        sudo cp -r -f html/installation ./html/lamp/
+        tree html/installation
+        sudo cp -r html/installation ./html/lamp/
       env:
         CI: true
     
