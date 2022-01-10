@@ -28,7 +28,7 @@ jobs:
       run: |
         cd docs/installation
         sudo vuepress build
-        cp -r html/installation /html/lamp/
+        cp -r html/installation ./html/lamp/
       env:
         CI: true
     
