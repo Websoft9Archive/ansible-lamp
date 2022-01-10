@@ -8,7 +8,7 @@ This documentation is provided by [Websoft9](https://www.websoft9.com/), it can 
 
 The LAMP (Linux-Apache-MySQL-PHP) website architecture is one of the most popular web stack in the world, and it is known as the golden combination of web applications under Linux. The stack includes: Linux operating system, Apache HTTP server, MySQL database, PHP programming language.
 
-![](https://libs.websoft9.com/Websoft9/DocsPicture/en/lamp/lamp-imagestacks-websoft9.png)
+![Websoft9](https://libs.websoft9.com/Websoft9/DocsPicture/en/lamp/lamp-imagestacks-websoft9.png)
 
 ---
 
