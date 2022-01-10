@@ -16,7 +16,7 @@ There have `<VirtualHost *:80> ...</VirtualHost>` , each segment is correspondin
 
 Example application's path is: */data/wwwroot/www.example.com*, you can modify it by [Apache vhost configuration file](/stack-components.md#apache)
 
-#### Does the LAMP support deploying multiple applications?
+#### Does the LAMP support deploy multiple applications?
 
 Yes, add new application, you should add new VirtualHost segment in the file [Apache vhost configuration file](/stack-components.md#apache) for it
 
