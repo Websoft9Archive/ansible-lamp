@@ -1,3 +1,6 @@
+# this ci file include special build task
+# if you replace it, please remember to migrate Job: vuepress build for Installation
+
 name: Docs Build and Upload
 
 on: 
@@ -25,6 +28,7 @@ jobs:
       run: |
         cd docs/installation
         sudo vuepress build
+        cp html/installation ./lamp/html
       env:
         CI: true
     
