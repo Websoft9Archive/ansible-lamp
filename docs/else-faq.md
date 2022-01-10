@@ -1,9 +1,11 @@
 # FAQ
 
 #### What is the default character set?
+
 UTF-8
 
 #### Apache working mode has event, prefork, worker, etc. Which is LAMP default?
+
 Prefork
 
 #### What is the Apache vhost configuration file?
@@ -49,6 +51,7 @@ Please delete all files in 9Panel */data/apps/9panel* and keep an empty 9Panel f
 No, you don't need to change them because LAMP Image have change it automaticly
 
 #### How can I reset my php.ini to return to the initial?
+
 Download the [php.ini](https://github.com/Websoft9/ansible-lamp/blob/master/roles/php/templates/php.ini) from Websoft9 LAMP project on Github, upload to Server and cover /ect/php.ini
 
 #### How to disable Apache Test Page?
