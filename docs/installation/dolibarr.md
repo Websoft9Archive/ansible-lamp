@@ -2,7 +2,7 @@
 
 This chapter is used for users who have subscribed **Dolibarr image** or **LAMP image**.
 
-Dolibarr is a software suite for small and micro enterprises, freelancers and other enterprises, which used for resource planning and customer relationship management. You can use one web suite to manage all of your business by Dolibarr Management SoftwareDiscourseDiscourse Reviews
+Dolibarr ([demo](https://www.dolibarr.org/onlinedemo.php)) is a software suite for small and micro enterprises, freelancers and other enterprises, which used for resource planning and customer relationship management. You can use one web suite to manage all of your business by Dolibarr Management SoftwareDiscourseDiscourse Reviews
 
 ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/dolibarr/dolibarr-gui-websoft9.png)
 
@@ -11,23 +11,22 @@ Dolibarr is a software suite for small and micro enterprises, freelancers and ot
 Before your installation, suggest you complete follows:
 
 * Get the **Internet IP** of your Server on your Cloud Platform
-* Visit *http://Internet IP/9panel* to quik start
+* Visit *http://Internet IP/9panel* to quick start
 * Know more about PHP runtime, includes:**installation directory, version, database, vhost** ([view it](https://support.websoft9.com/docs/lamp/stack-components.html))
 
 ## Dolibarr deployment
 
-**If you are using the Websoft9 Dolibarr Image, go to the [Dolibarr Installation Wizard](https://github.com/Websoft9/ansible-lamp/blob/main/docs/installation/dolibarr.md#dolibarr-installation-wizard) directly**
+**If you are using the Websoft9 Dolibarr Image, go to the [Dolibarr Installation Wizard](/installation/dolibarr.md#dolibarr-installation-wizard) directly**
 
 If you are using LAMP, please deploy Dolibarr to your Server as follows:
 
 1. Log in your Domain console and complete a Domain resolution, make sure it successful
+
 2. Using [phpMyAdmin to log in MySQL](https://support.websoft9.com/docs/lamp/admin-mysql.html), create a database named`dolibarr`
-3. Go to Dolibarr official website to [download](https://www.dolibarr.org/downloads)  source code
+
+3. Go to Dolibarr official website to [download](https://www.dolibarr.org/downloads) source code
+
 4. Refer to *[Deploy second application](https://support.websoft9.com/docs/lamp/solution-deployment.html#deploy-second-application)* of [LAMP](https://support.websoft9.com/docs/lamp/) to deploy Dolibarr to your Server
-
----
-
-
 
 ## Dolibarr Installation Wizard
 
