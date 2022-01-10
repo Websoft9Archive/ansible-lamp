@@ -24,6 +24,7 @@ LAMP（Linux-Apache-MySQL-PHP）是流行的Web运行环境组合，基于免费
 - 增加更多网站
 - 配置 HTTPS 证书等
 - 修改网站路径
+- 预制安装包
 - 绑定域名
 - ...
 
