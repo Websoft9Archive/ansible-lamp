@@ -14,9 +14,16 @@ jobs:
       run: |
        sudo npm install -g vuepress
         
-    - name: vuepress build
+    - name: vuepress build for LAMP
       run: |
         cd docs
+        sudo vuepress build
+      env:
+        CI: true
+
+    - name: vuepress build for Installation
+      run: |
+        cd docs/installation
         sudo vuepress build
       env:
         CI: true

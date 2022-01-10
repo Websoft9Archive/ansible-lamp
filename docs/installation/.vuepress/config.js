@@ -6,7 +6,7 @@ base: '/docs/lamp/installation/',
 dest: 'html/installation',
 
 head: [
-  ['link', { rel: 'icon', href: '/favcon.ico' }]
+  ['link', { rel: 'icon', href: '/favicon.ico' }]
 ],
 
 //vuepress多语言，区别于主题多语言
@@ -14,7 +14,7 @@ locales: {
     '/': {
       lang: 'en-US', // 将会被设置为 <html> 的 lang 属性
       title: 'PHP Apps Installations',
-      description: 'You can get the Installation of opensource applications & CMS based on LAMP from this documentation powered by Websoft9.'
+      description: 'You can get the Installation of open source applications & CMS based on LAMP from this documentation powered by Websoft9.'
     },
     '/zh/': {
       lang: 'zh-CN',
