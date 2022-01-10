@@ -10,8 +10,6 @@ The LAMP (Linux-Apache-MySQL-PHP) website architecture is one of the most popula
 
 ![Websoft9](https://libs.websoft9.com/Websoft9/DocsPicture/en/lamp/lamp-imagestacks-websoft9.png)
 
----
-
 ## Improve
 
 This document will continue to improve and broadly absorb the needs of users. If you have good idea, please don't hesitate to give us feedback by "Edit this page on GitHub", and welcome you to fork this documentation on [Github](https://github.com/Websoft9/ansible-lamp)
