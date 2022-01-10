@@ -4,7 +4,7 @@
 
 UTF-8
 
-#### Apache working mode has event, prefork, worker, etc. Which is LAMP default?
+#### Apache working mode has event, prefork, worker, etc. Which is this LAMP default?
 
 Prefork
 
