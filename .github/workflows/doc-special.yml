@@ -1,5 +1,5 @@
 # this ci file include special build task
-# if you replace it, please remember to migrate Job: vuepress build for Installation
+# if you replace it, please remember to migrate Job: vuepress build for LAMP and Installation
 
 name: Docs Build and Upload
 
@@ -17,18 +17,16 @@ jobs:
       run: |
        sudo npm install -g vuepress
         
-    - name: vuepress build for LAMP
+    - name: vuepress build for LAMP and Installation
       run: |
         cd docs
         sudo vuepress build
-      env:
-        CI: true
-
-    - name: vuepress build for Installation
-      run: |
-        cd docs/installation
+        ls
+        sudo rm -rf html/lamp/installation
+        ls
+        cd installation
         sudo vuepress build
-        sudo rm -rf ./html/lamp/installation
+        ls
         sudo cp -r -f html/installation ./html/lamp/
       env:
         CI: true
