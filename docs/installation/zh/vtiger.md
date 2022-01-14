@@ -74,8 +74,8 @@
 
 VtigerCRM支持多国语言，中文包安装方法如下：
 
-1.  到官方[MarketPlace](https://marketplace.vtiger.com/app/listings)-Language Pack下载Chinese 简体中文语言包
-2.  通过主菜单【Setting – CRM Setting – Module Management – Modules 】进入模块管理界面，点击右上角 “Import Module from Zip”按钮，进入导入模块管理界面，选择语言包进行导入。注意：导入页面这里有个 bug，导入时请直接选择语言包进行导入，不要勾选“ I accept with disclaimer and would like to proceed”否则无法导入。
+1.  到官方[MarketPlace](https://marketplace.vtiger.com/app/listings)-Language Pack下载Chinese 简体中文语言包。官方下载不了，请到中文语言包作者发布的[下载地址](https://maie.name/789.html)下载
+2.  通过主菜单【Setting – CRM Setting – Module Management – Modules 】进入模块管理界面，点击右上角 “Import Module from Zip”按钮，进入导入模块管理界面，选择语言包进行导入。注意：导入页面这里有个 bug，导入时请直接选择语言包进行导入，不要勾选“ I accept with disclaimer and would like to proceed”否则无法导入。
 3.  右上角点击你的登录用户名->My Preferences-> Edit，点击 Language 后面的下拉框选择语言，然后保存
     ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/vtigercrm/change-language-websoft9.jpg)
 
