@@ -132,3 +132,9 @@ VtigerCRM支持第三方的SMTP发送邮件模式，具体如下：
 - rm -rf /data/wwwroot/vtigercrm/test/templates_c/v7
 - rm -rf /data/wwwroot/vtigercrm/cache/*
 ```
+#### VtigerCRM 在添加【任务】或【事件】时，速度慢，并有 DataTime 格式转换错误
+
+![{~CR_VD4S$O 7 LQ@2R4H2](https://user-images.githubusercontent.com/62225175/149732380-42ad5683-d5f3-4ceb-9244-f7a27740153f.png)
+
+问题原因：VtigerCRM 的日期格式设置导致格式转换错误（在中文包环境下出现）
+解决方案：将日期格式更改为：yyyy-mm-dd
